@@ -1,0 +1,39 @@
+///
+/// Slate by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Menu */
+
+	ul.menu {
+		padding: 0;
+		list-style: none;
+
+		li {
+			padding: 0;
+			display: inline-block;
+			margin-left: 0.75em;
+			padding-left: 0.75em;
+			border-left: solid 1px;
+			line-height: 1em;
+
+			&:first-child {
+				margin-left: 0;
+				padding-left: 0;
+				border-left: 0;
+			}
+		}
+	}
+
+	@mixin color-menu($p: null) {
+		$highlight: _palette($p, highlight);
+
+		ul.menu {
+			li {
+				border-left-color: _palette($p, border);
+			}
+		}
+	}
+
+	@include color-menu;
